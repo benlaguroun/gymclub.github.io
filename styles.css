@@ -6,16 +6,8 @@ body {
 }
 
 /* Header Section */
-/* Header Section */
 
-.logo {
-    margin-right: 20px; /* Add margin to the right of the logo */
-}
-
-nav {
-    flex: 1; /* Expand the nav element to fill the remaining space */
-}
-
+/* Header Styles */
 header {
     background-color: #333;
     padding: 20px 0;
@@ -30,8 +22,17 @@ header {
     padding: 0 20px;
 }
 
+.logo {
+    margin-right: 300px; /* Add margin to the right of the logo */
+}
+
 .logo img {
-    max-width: 150px; /* Adjust as needed */
+    max-width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Align menu items vertically center */
 }
 
 nav ul {
@@ -39,11 +40,10 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
 }
 
 nav ul li {
-    margin: 0 15px; /* Adjust spacing between menu items */
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -53,9 +53,54 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff5e14; /* Change color on hover */
+    color: #ff5e14;
 }
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hide the hamburger menu button by default */
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #e64700;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu button on mobile */
+    }
+
+    nav ul.menu {
+        display: none; /* Hide the menu items by default on mobile */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul.menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul.menu li a {
+        color: #fff;
+    }
+
+    nav ul.menu li a:hover {
+        color: #ff5e14;
+    }
+
+    /* Show the menu when hamburger menu button is clicked */
+    nav.open ul.menu {
+        display: flex;
+    }
+}
 
 /* Hero Section */
 #hero {
@@ -70,7 +115,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hero_background.jpg');
+    background-image: url('images/hero_background.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.7); /* Adjust brightness for better contrast */
@@ -122,7 +167,6 @@ nav ul li a:hover {
     background-color: #e64700;
 }
 
-
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -137,9 +181,21 @@ nav ul li a:hover {
 .btn:hover {
     background-color: #555;
 }
-/* Add your styles here */
 
 /* Services Section */
+
+/* Services Section Title */
+#services-title {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Add transition for color change */
+}
+
+/* Hover Effect */
+#services-title:hover {
+    color: #ff5e14; /* Change color on hover */
+}
+
 #services {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -153,7 +209,7 @@ nav ul li a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 30px;
 }
 
@@ -206,56 +262,11 @@ nav ul li a:hover {
     background-position: center;
 }
 
-.service-card h3 {
-    margin-top: 0;
-}
-
-.service-card p {
-    margin-bottom: 0;
-}
-
-/* Testimonials Section */
-
-
-.testimonial-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 30px;
-    justify-content: center;
-    padding: 20px 0;
-    scroll-snap-type: x mandatory;
-}
-
-.testimonial-card {
-    flex: 0 0 auto;
-    width: 300px;
-    background-color: #555;
-    border-radius: 10px;
-    padding: 20px;
-    scroll-snap-align: start;
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.05);
-}
-
-.testimonial-content {
-    text-align: center;
-}
-
-.testimonial-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.author {
-    font-style: italic;
-}
+.service-card h
 /* Testimonials Section */
 #testimonials {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
     padding: 50px 0;
 }
 
@@ -275,7 +286,7 @@ nav ul li a:hover {
 .testimonial-card {
     flex: 0 0 auto;
     width: 300px;
-    background-color: #555;
+    background-color: #555; /* Dark card background */
     border-radius: 10px;
     padding: 20px;
     scroll-snap-align: start;
@@ -299,9 +310,30 @@ nav ul li a:hover {
     font-style: italic;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .testimonial-carousel {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .testimonial-card {
+        width: calc(50% - 15px);
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
 /* Gallery Section */
+
 #gallery {
     padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
 #gallery h2 {
@@ -310,15 +342,15 @@ nav ul li a:hover {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .gallery-item {
     position: relative;
-    width: calc(33.33% - 20px); /* Adjust as needed */
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .gallery-item img {
@@ -362,9 +394,22 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
 /* About Us Section */
 #about {
-    padding: 100px 0;
+    padding: 25px 0;
     background-color: #f9f9f9;
 }
 
@@ -382,11 +427,29 @@ nav ul li a:hover {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    overflow: hidden;
+    max-height: 120px; /* Adjust as needed */
+}
+
+#see-more-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ff5e14;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#see-more-btn:hover {
+    background-color: #e64700;
 }
 
 /* Contact Us Section */
 #contact {
-    padding: 100px 0;
+    padding: 10px 0;
     background-color: #fff;
 }
 
@@ -402,17 +465,15 @@ nav ul li a:hover {
 
 .form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .form-group input,
 .form-group textarea {
-    flex: 1;
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
 }
 
 .form-group textarea {
@@ -432,18 +493,4 @@ nav ul li a:hover {
 .btn:hover {
     background-color: #e64700;
 }
-
-/* Footer Section */
-#footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-#footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
 
