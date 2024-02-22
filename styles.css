@@ -262,6 +262,76 @@ nav ul li a:hover {
     background-position: center;
 }
 
+/* Memberships Section */
+
+/* Add your styles here */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.membership-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.membership-card {
+    width: calc(33.33% - 40px); /* Adjusted width to leave space between cards */
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card h3 {
+    text-align: center;
+}
+
+.membership-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membership-card ul li {
+    margin-bottom: 5px;
+}
+
+.membership-card p {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .membership-cards {
+        flex-direction: column;
+    }
+
+    .membership-card {
+        width: calc(100% - 40px);
+    }
+}
+
 .service-card h
 /* Testimonials Section */
 #testimonials {
@@ -494,3 +564,15 @@ nav ul li a:hover {
     background-color: #e64700;
 }
 
+/* Footer Section */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 14px;
+}

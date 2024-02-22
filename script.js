@@ -47,3 +47,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Data for membership offers
+const membershipsData = [
+    {
+        type: "Basic",
+        details: [
+            "Access to gym facilities",
+            "2 group fitness classes per week",
+        ],
+        price: "$30 per month",
+    },
+    {
+        type: "Standard",
+        details: [
+            "Access to gym facilities",
+            "5 group fitness classes per week",
+            "1 personal training session per month",
+        ],
+        price: "$50 per month",
+    },
+    {
+        type: "Premium",
+        details: [
+            "Access to gym facilities",
+            "Unlimited group fitness classes",
+            "2 personal training sessions per month",
+            "Nutrition counseling",
+        ],
+        price: "$80 per month",
+    },
+];
+
+// Function to generate HTML for membership cards
+function generateMembershipCards() {
+    const membershipCardsContainer = document.querySelector(".membership-cards");
+
+    membershipsData.forEach((membership) => {
+        const card = document.createElement("div");
+        card.classList.add("membership-card");
+
+        const html = `
+            <h3>${membership.type}</h3>
+            <ul>
+                ${membership.details.map((detail) => `<li>${detail}</li>`).join("")}
+            </ul>
+            <p>${membership.price}</p>
+            <a href="#" class="btn">See Offer</a>
+        `;
+
+        card.innerHTML = html;
+        membershipCardsContainer.appendChild(card);
+    });
+}
+
+// Call the function to generate membership cards when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", generateMembershipCards);
+
