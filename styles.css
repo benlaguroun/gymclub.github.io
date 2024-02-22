@@ -161,8 +161,9 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    max-width: 150px; /* Limit button width */
+    margin: 0 auto; /* Center the button */
 }
-
 .btn:hover {
     background-color: #e64700;
 }
