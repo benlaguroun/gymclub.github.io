@@ -5,8 +5,6 @@ body {
     padding: 0;
 }
 
-/* Header Section */
-
 /* Header Styles */
 header {
     background-color: #333;
@@ -23,7 +21,7 @@ header {
 }
 
 .logo {
-    margin-right: 300px; /* Add margin to the right of the logo */
+    margin-right: 300px;
 }
 
 .logo img {
@@ -32,7 +30,7 @@ header {
 
 nav {
     display: flex;
-    align-items: center; /* Align menu items vertically center */
+    align-items: center;
 }
 
 nav ul {
@@ -58,7 +56,7 @@ nav ul li a:hover {
 
 /* Hamburger Menu Styles */
 .hamburger-menu {
-    display: none; /* Hide the hamburger menu button by default */
+    display: none;
     background: none;
     border: none;
     font-size: 50px;
@@ -69,11 +67,11 @@ nav ul li a:hover {
 /* Media Query for Mobile */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block; /* Show the hamburger menu button on mobile */
+        display: block;
     }
 
     nav ul.menu {
-        display: none; /* Hide the menu items by default on mobile */
+        display: none; 
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -96,7 +94,6 @@ nav ul li a:hover {
         color: #ff5e14;
     }
 
-    /* Show the menu when hamburger menu button is clicked */
     nav.open ul.menu {
         display: flex;
     }
@@ -118,7 +115,7 @@ nav ul li a:hover {
     background-image: url('images/hero_background.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7); /* Adjust brightness for better contrast */
+    filter: brightness(0.7);
     z-index: -1;
 }
 
@@ -161,8 +158,8 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    max-width: 150px; /* Limit button width */
-    margin: 0 auto; /* Center the button */
+    max-width: 150px;
+    margin: 0 auto;
 }
 .btn:hover {
     background-color: #e64700;
@@ -189,12 +186,12 @@ nav ul li a:hover {
 #services-title {
     text-align: center;
     margin-bottom: 20px;
-    transition: color 0.3s ease; /* Add transition for color change */
+    transition: color 0.3s ease;
 }
 
 /* Hover Effect */
 #services-title:hover {
-    color: #ff5e14; /* Change color on hover */
+    color: #ff5e14;
 }
 
 #services {
@@ -237,19 +234,19 @@ nav ul li a:hover {
 
 /* Icon Background Colors */
 .personal-training {
-    background-color: #FFC107; /* Yellow */
+    background-color: #FFC107;
 }
 
 .group-fitness {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
 }
 
 .nutrition-counseling {
-    background-color: #03A9F4; /* Blue */
+    background-color: #03A9F4;
 }
 
 .weightlifting-programs {
-    background-color: #FF5722; /* Orange */
+    background-color: #FF5722;
 }
 
 .service-icon:before {
@@ -265,7 +262,6 @@ nav ul li a:hover {
 
 /* Memberships Section */
 
-/* Add your styles here */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -279,7 +275,7 @@ nav ul li a:hover {
 }
 
 .membership-card {
-    width: calc(33.33% - 40px); /* Adjusted width to leave space between cards */
+    width: calc(33.33% - 40px);
     background-color: #f9f9f9;
     padding: 20px;
     margin: 10px;
@@ -322,7 +318,6 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-/* Media query for responsive layout */
 @media (max-width: 768px) {
     .membership-cards {
         flex-direction: column;
@@ -336,8 +331,8 @@ nav ul li a:hover {
 .service-card h
 /* Testimonials Section */
 #testimonials {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #333; 
+    color: #fff;
     padding: 50px 0;
 }
 
@@ -357,7 +352,7 @@ nav ul li a:hover {
 .testimonial-card {
     flex: 0 0 auto;
     width: 300px;
-    background-color: #555; /* Dark card background */
+    background-color: #555;
     border-radius: 10px;
     padding: 20px;
     scroll-snap-align: start;
@@ -499,7 +494,7 @@ nav ul li a:hover {
     line-height: 1.6;
     margin-bottom: 20px;
     overflow: hidden;
-    max-height: 120px; /* Adjust as needed */
+    max-height: 120px; 
 }
 
 #see-more-btn {
