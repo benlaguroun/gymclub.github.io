@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.forEach((value, key) => {
             formDataObject[key] = value;
         });
-        // Here you can send formDataObject to your server or save it to local storage
-        console.log(formDataObject); // For demonstration, logging the form data to console
-        // You can replace the above console.log statement with your data-saving logic
-        alert('Message sent successfully!'); // Show a success message to the user
-        contactForm.reset(); // Reset the form after submission
+      
+	    console.log(formDataObject); 
+	    
+	    alert('Message sent successfully!'); 
+	    contactForm.reset();
     });
 });
 
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const menu = document.querySelector('nav ul.menu');
 
-    // Toggle menu visibility when hamburger menu button is clicked
-    hamburgerMenu.addEventListener('click', function () {
+    
+	hamburgerMenu.addEventListener('click', function () {
         menu.classList.toggle('open');
     });
 });
@@ -55,7 +55,7 @@ const membershipsData = [
             "Access to gym facilities",
             "2 group fitness classes per week",
         ],
-        price: "$30 per month",
+        price: "30 dh per month",
     },
     {
         type: "Standard",
@@ -64,7 +64,7 @@ const membershipsData = [
             "5 group fitness classes per week",
             "1 personal training session per month",
         ],
-        price: "$50 per month",
+        price: "50 dh  per month",
     },
     {
         type: "Premium",
@@ -74,7 +74,7 @@ const membershipsData = [
             "2 personal training sessions per month",
             "Nutrition counseling",
         ],
-        price: "$80 per month",
+        price: "80 dh  per month",
     },
 ];
 
