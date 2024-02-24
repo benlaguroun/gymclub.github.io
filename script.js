@@ -55,7 +55,7 @@ const membershipsData = [
             "Access to gym facilities",
             "2 group fitness classes per week",
         ],
-        price: "30 dh per month",
+        price: "130 dh per month",
     },
     {
         type: "Standard",
@@ -64,7 +64,7 @@ const membershipsData = [
             "5 group fitness classes per week",
             "1 personal training session per month",
         ],
-        price: "50 dh  per month",
+        price: "150 dh  per month",
     },
     {
         type: "Premium",
@@ -72,9 +72,8 @@ const membershipsData = [
             "Access to gym facilities",
             "Unlimited group fitness classes",
             "2 personal training sessions per month",
-            "Nutrition counseling",
         ],
-        price: "80 dh  per month",
+        price: "180 dh  per month",
     },
 ];
 
